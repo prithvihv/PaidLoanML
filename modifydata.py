@@ -8,7 +8,7 @@ import pickle
 data = pd.read_csv("./Loan payments data.csv")
 pkl_filename = "Model.pkl"
 
-def savemodel():
+def savemodel():#logistic regression
     from sklearn import preprocessing
     le = preprocessing.LabelEncoder()
     data['loan_status'] = le.fit_transform(data['loan_status'])
